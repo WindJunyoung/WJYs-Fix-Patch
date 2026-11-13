@@ -1,0 +1,26 @@
+{
+  "schemaVersion": 1,
+  "id": "wjys_fix_patch",
+  "version": "${version}",
+  "name": "WJY's Fix Patch",
+  "description": "纯 Mixin 实现的原版 Bug 修复模组（MC-219981 / MC-302687 / MC-267023 / MC-306614 / MC-310787 / MC-265423）。内置冲突自动避让，兼容主流性能优化与村民优化模组；单项失效自动回退原版，不影响其他修复。",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "cn.blockforge.generated.minecraft1211fa8fc6.WjysFixPatch"
+    ],
+    "client": [
+      "cn.blockforge.generated.minecraft1211fa8fc6.WjysFixPatchClient"
+    ]
+  },
+  "mixins": [
+    "wjys-fix-patch.mixins.json",
+    "wjys-fix-patch.client.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": ">=0.19.3",
+    "minecraft": "~1.21.1",
+    "java": ">=21",
+    "fabric-api": "*"
+  }
+}
